@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stripe - Login</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+    
+                <li><button onclick="darkMode()" id="darkmode">Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <h3 class="stripe">Stripe</h3>
+            <div class="from-login">
+                <form action="" class="main-content">
+                    <h3>Sign in to your account</h3>
+                    <div class="input-box">
+                        <p>email</p>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <div class="flex-items">
+                            <p>Password</p>
+                            <a href="">Forgot your password?</a>
+                        </div>
+                        <input type="password" placeholder="" required>
+                    </div>
+                    <label><input type="checkbox" class="checkbox"> <p>Stay signed for a week</p></label>
+
+                    <button type="submit" class="btn">Continue</button>
+                    <div class="single-signed">
+                        <a href="#">Use single sign-on (SSO) instead</a>
+                    </div>
+                </form>
+            </div>
+            <div class="sign-up">
+                <p>Don't have an account ? <span><a href="">Sign up</a></span></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        //Dark Mode
+        const body = document.body;
+        const darkmode = document.getElementById('darkmode');
+        const darkLimit = 5;
+        let darkCounter = 0;
+        let darkRemainingLeft;
+
+        function darkMode(){                
+            if(darkRemainingLeft == 0){
+                //info.textContent = "CHANGE MODE FITUR HAS BEEN LIMITED"
+                //mode.style.display = "none"
+                //home.textContent = "RESTART"
+                return;
+            }
+            darkCounter += 1;
+            
+            //render to info element
+            body.classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>
