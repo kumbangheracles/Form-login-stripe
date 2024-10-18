@@ -7,13 +7,6 @@
     font-family: "Roboto Mono", monospace;
 }
 
-
-/* .white{
-    background-color: white;
-    color: rgb(0, 0, 0);
-    transition: 0.3s;
-} */
-
 .dark{
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
